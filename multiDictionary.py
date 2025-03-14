@@ -31,6 +31,7 @@ class MultiDictionary:
             for w in dictionary.get_words():
                 if word.lower() == w.lower():
                     is_correct = True
+                    break #Esce dal ciclo appena trova la parola
 
             rich_W = rw.RichWord(word)
             rich_W.corretta = is_correct
