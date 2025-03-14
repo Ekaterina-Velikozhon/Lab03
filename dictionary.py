@@ -1,6 +1,7 @@
 class Dictionary:
     def __init__(self, lingua, filename):
         self.lingua = lingua
+
         self.words = set()
         self.loadDictionary(filename)
 

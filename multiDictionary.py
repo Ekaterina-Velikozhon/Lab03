@@ -28,8 +28,9 @@ class MultiDictionary:
             is_correct = False  # Variabile per controllare se la parola è presente
 
             # Implementazione della ricerca lineare
-            if word.lower() in dictionary.get_words():
-                is_correct = True
+            for w in dictionary.get_words():
+                if word.lower() == w.lower():
+                    is_correct = True
 
             rich_W = rw.RichWord(word)
             rich_W.corretta = is_correct
