@@ -4,29 +4,29 @@ sc = spellchecker.SpellChecker()
 
 while(True):
     sc.printMenu()
-
     txtIn = input()
     # Add input control here!
+    match txtIn:
+        case "1":
+            print("Inserisci la tua frase in Italiano\n")
+            txtIn = input()
+            sc.handleSentence(txtIn,"italiano")
+            continue
 
-    if int(txtIn) == 1:
-        print("Inserisci la tua frase in Italiano\n")
-        txtIn = input()
-        sc.handleSentence(txtIn,"italian")
-        continue
+        case "2":
+            print("Inserisci la tua frase in Inglese\n")
+            txtIn = input()
+            sc.handleSentence(txtIn,"inglese")
+            continue
 
-    if int(txtIn) == 2:
-        print("Inserisci la tua frase in Inglese\n")
-        txtIn = input()
-        sc.handleSentence(txtIn,"english")
-        continue
+        case "3":
+            print("Inserisci la tua frase in Spagnolo\n")
+            txtIn = input()
+            sc.handleSentence(txtIn,"spagnolo")
+            continue
 
-    if int(txtIn) == 3:
-        print("Inserisci la tua frase in Spagnolo\n")
-        txtIn = input()
-        sc.handleSentence(txtIn,"spanish")
-        continue
+        case "4":
+            break
 
-    if int(txtIn) == 4:
-        break
-
-
+        case _:  # Se l'utente inserisce un numero non valido
+            print("Opzione non valida. Riprova.")
