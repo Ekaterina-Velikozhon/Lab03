@@ -25,5 +25,5 @@ class Dictionary:
     def contains(self, word):
         return word in self.words
 
-    def get_words(self): #è necessario per estrarre le parole dal mio oggetto Dictionary in un formato iterabile
+    def get_words(self): # == getter
         return self.words

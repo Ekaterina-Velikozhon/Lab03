@@ -24,7 +24,7 @@ class MultiDictionary:
 
     def searchWordLinear(self, word, language):
         if language in self.dictionaries:
-            dictionary = self.dictionaries[language]  # Ottiengo il dizionario della lingua selezionata; converto il set in una lista
+            dictionary = self.dictionaries[language]  # Ottiengo il dizionario della lingua selezionata
             is_correct = False  # Variabile per controllare se la parola è presente
 
             # Implementazione della ricerca lineare
@@ -43,7 +43,7 @@ class MultiDictionary:
     def searchWordDichotomic(self, word, language):
         dictionary = self.dictionaries[language]
         if language in self.dictionaries:
-            dictionary = sorted(dictionary.get_words())  # Converte il set in lista ordinata
+            dictionary = sorted(dictionary.get_words())  # Converte il set in una lista ordinata
             is_correct = False
 
             parte_sinistra, parte_destra = 0, len(dictionary)-1 # sinistra = 0, destra = len -1

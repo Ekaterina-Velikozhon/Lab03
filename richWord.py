@@ -7,10 +7,9 @@ class RichWord:
     def corretta(self):
         # print("getter of parola called" )
         return self._corretta
-    #sia "parola" che "corretta" sono private! -> qundi devo utilizzare i metodi Getter e Setter
-    @corretta.setter #setter, setta il valore di "corretta"
+    # Sia "parola" che "corretta" sono private! -> qundi devo utilizzare i metodi Getter e Setter
+    @corretta.setter # Setter, setta il valore di "corretta"
     def corretta(self, boolValue):
-        # print("setter of parola called" )
         self._corretta = boolValue
 
     def __str__(self):
